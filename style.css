@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* header section and footer */
+header, section, footer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 60px;
+}
+
+.header-content {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.start-animation--button {
+  width: inherit;
+  align-self: center;
+  justify-self: center;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(75, 75, 98);
+  padding: 15px;
+  border-radius: 10px;
+  color: rgb(75, 75, 98);
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* scenes */
+
+#scene {
+  height: 100vh;
+  color: white;
+}
+
+.scene-1 {
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.scene-2 {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.scene-3 {
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+/*
+* Progress bar
+*/
+
+#progressbar {
+  width: 0%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+#progressbar div {
+  height: 4px;
+  background: #f00;
+  background: -o-linear-gradient(left, #FF7E00, #FF0048, #940BA2, #008AFF);
+  background: -webkit-gradient(linear, left top, right top, from(#FF7E00), color-stop(#FF0048), color-stop(#940BA2), to(#008AFF));
+  background: linear-gradient(90deg, #FF7E00, #FF0048, #940BA2, #008AFF);
+  border-radius: 0 2px 2px 0;
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  -ms-border-radius: 0 2px 2px 0;
+  -o-border-radius: 0 2px 2px 0;
+}
