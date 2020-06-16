@@ -154,7 +154,6 @@ ScrollTrigger.create({
   end: 'bottom center',
   scrub: 1,
   pin: true,
-  markers: true,
   toggleClass: 'sceneActive',
   onEnter: () => console.info('enter the trigger'),
   onLeave: () => console.info('leave the trigger'),
