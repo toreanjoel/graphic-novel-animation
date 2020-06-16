@@ -17,18 +17,18 @@ header, section, footer {
 header {
   background: rgb(45, 45, 55);
   color: rgb(255, 255, 255);
-  display: grid;
-  grid-template-columns: 1fr 3fr;
 }
 
 .novel_details {
-  height: 100%;
-  justify-self: self-start;
   background: rgb(21, 21, 21);
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 400px;
 }
 
 .novel_info {
-  padding: 15px;
+  padding: 15px 15px 60px 15px;
 }
 
 .novel_info div {
@@ -58,10 +58,10 @@ header {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-30px);
+    transform: translateY(-10px);
   }
   60% {
-    transform: translateY(-15px);
+    transform: translateY(-5px);
   }
 }
 
