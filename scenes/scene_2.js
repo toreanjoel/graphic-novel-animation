@@ -36,31 +36,3 @@ ScrollTrigger.create({
 /**
  * TWEENS for each of the elements
  */
-
-
-/**
- * TWEENS for each of the elements
- */
-scene_one_timeline.to(`${scene_one_layers} > .layer-1`, {
-  x: -100,
-  duration: 8,
-}, 0);
-
-scene_one_timeline.to(`${scene_one_layers} > .layer-2`, {
-  x: -50,
-  duration: 8,
-}, 0);
-
-scene_one_timeline.fromTo(`${scene_one_layers} > .info-item-1`, {
-  opacity: 0,
-}, {
-  opacity: 1,
-  duration: 3,
-}, 1);
-
-scene_one_timeline.fromTo(`${scene_one_layers} > .info-item-2`, {
-  opacity: 0,
-}, {
-  opacity: 1,
-  duration: 3,
-}, 3.5);
