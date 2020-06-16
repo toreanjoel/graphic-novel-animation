@@ -10,7 +10,7 @@ header, section, footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family:'Comic Sans', cursive;
+  font-family: monospace;
 }
 
 /* header section */
@@ -20,7 +20,8 @@ header {
 }
 
 .novel_details {
-  background: rgb(21, 21, 21);
+  /* background: rgb(21, 21, 21); */
+  background-image: linear-gradient(to right, rgb(0, 0, 0) , rgba(0, 0, 0, 0));
   position: absolute;
   left: 0;
   height: 100%;

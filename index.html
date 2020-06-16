@@ -7,19 +7,17 @@
   <title>Animate</title>
 </head>
 <body>
-  <header style="background: url(./assets/header/cover.jpg);background-size: cover;background-position: center center;"">
+  <header style="background: url(./assets/header/cover.jpg);background-size: cover;background-position: center center;">
     <div class="novel_details">
       <div class="novel_info">
-        <div class="novel_info-title">Title</div>
-        <div class="novel_info-sub-text">Subtext comes here</div>
+        <div class="novel_info-title">99942 Apophis</div>
+        <div class="novel_info-sub-text">Until we meet again</div>
         <div class="novel_info-author">Author info</div>
         <hr />
         <div class="novel_info-description">
-          this is some random descriptionthis is some random descriptionthis is some random description.
-          this is some random descriptionthis is some random descriptionthis is some random descriptionthis is some random description
-          this is some random descriptionthis is some random descriptionthis is some random description
-          this is some random description.
-          <br />
+          This will contain the description of what is to come in the graphic novel, this is not the full story but more
+          the summary of what the current graphic novel will showcase
+          <br /><br />
           this is some random descriptionthis is some random descriptionthis is some random description
           this is some random descriptionthis is some random descriptionthis is some random descriptionthis is some random description
           this is some random descriptionthis is some random descriptionthis is some random description
@@ -39,34 +37,24 @@
     <div class="layers">
       <!-- here we add the text for the scene -->
       <p class="scene-info info-item-1 top-left">The night was quiet, as it always was in the vacume of space</p>
-      <p class="scene-info info-item-2 bottom-right">That was the start of it all...</p>
+      <p class="scene-info info-item-2 bottom-right">Some more text here</p>
       <!-- this is the position relative to the parent -->
       <!-- the parent will have the base styles for all layers -->
-      <img class="layer-3" style="width: 100%; height: 100%;" src="./assets/scene_1/layer3.jpg" />
+      <img class="layer-3" style="width: 100%; height: 100%;" src="assets/scene_1/layer3.jpg" />
       <img class="layer-2" style="bottom: -5px;left: -300px; height: 100%;" src="./assets/scene_1/layer2.png" />
       <img class="layer-1" style="bottom: 0;" src="./assets/scene_1/layer1.png" />
     </div>
+  </section>
+  <section class="scene-2" id="scene" style="background: url(./assets/scene_2/cover.jpg);">
+    <div id="progressbar"><div></div></div>
+    <div class="layers">
 
-  </section>
-  <!-- <section class="scene-2" id="scene">
-    <div id="progressbar">
-      <div></div>
     </div>
-    <div class="heading">SCENE TWO</div>
   </section>
-  <section class="scene-3" id="scene">
-    <div id="progressbar">
-      <div></div>
-    </div>
-    <div class="heading">SCENE THREE</div>
-  </section> -->
   <footer> End </footer>
-  
   <script src="./libraries/gsap/minified/gsap.min.js"></script>
   <script src="./libraries/gsap/minified/ScrollTrigger.min.js"></script>
-  <!-- here import the scripts -->
   <script src='./helpers.js'></script>
-  <script src='./app.js'></script>
-  
+  <script src='./imports.js'></script>
 </body>
 </html>

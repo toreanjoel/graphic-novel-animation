@@ -8,3 +8,17 @@ function progressBar(currentContextScene) {
   const currentElmProgressBar = pin.querySelector('#progressbar');
   currentElmProgressBar.style.width = `${currentContextScene.progress * 100}%`;
 }
+
+/**
+ * This will import the files and dynaically add them to the dom
+ * @param {string} jsFilePath 
+ */
+function includeJs(jsFilePath) {
+  var js = document.createElement('script');
+
+  js.type = 'text/javascript';
+  js.src = jsFilePath;
+
+  document.body.appendChild(js);
+  return js;
+}
