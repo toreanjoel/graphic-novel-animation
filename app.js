@@ -120,38 +120,36 @@ const scene_two_timeline = gsap.timeline();
 const scene_three_timeline = gsap.timeline();
 
 // animations or tweens for the scenes - remember we can chain here
-scene_one_timeline.to('.scene-1 > .heading', {
-  rotation: 360,
+// third parameter is used to know where in the timeline the tween starts
+scene_one_timeline.to('.layers > .layer-1', {
+  x: -100,
   duration: 8,
-});
+}, 0);
 
-scene_two_timeline.to('.scene-2 > .heading', {
-  rotation: 360,
+scene_one_timeline.to('.layers > .layer-2', {
+  x: -50,
+  duration: 8,
+}, 0);
+
+scene_one_timeline.fromTo('.layers > .info-item-1', {
+  opacity: 0,
+}, {
+  opacity: 1,
   duration: 3,
-});
+}, 1);
+
+scene_one_timeline.fromTo('.layers > .info-item-2', {
+  opacity: 0,
+}, {
+  opacity: 1,
+  duration: 3,
+}, 3.5);
+
 
 // scroll triggers for the different panels or scenes
 ScrollTrigger.create({
   animation: scene_one_timeline,
   trigger: '.scene-1',
-  start: 'top top',
-  end: 'bottom center',
-  scrub: 1,
-  pin: true,
-  markers: true,
-  toggleClass: 'sceneActive',
-  onEnter: () => console.info('enter the trigger'),
-  onLeave: () => console.info('leave the trigger'),
-  onBack: () => console.info('backwards to the trigger'),
-  onLeaveBack: () => console.info('backwards all the way past the trigger'),
-  // on update that runs for every time the scroll triggers for
-  onUpdate: (self) => progressBar(self),
-});
-
-// scroll triggers for the different panels or scenes
-ScrollTrigger.create({
-  animation: scene_two_timeline,
-  trigger: '.scene-2',
   start: 'top top',
   end: 'bottom center',
   scrub: 1,
