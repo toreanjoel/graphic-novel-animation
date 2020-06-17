@@ -17,12 +17,12 @@ const scene_one_layers = `${scene_one} > .layers`;
 /**
  * TWEENS for each of the elements
  */
-scene_one_timeline.to(`.scene-1 > .layers > .layer-1`, {
+scene_one_timeline.fromTo(`.scene-1 > .layers > .layer-1`, {}, {
   x: -100,
   duration: 8,
 }, 0);
 
-scene_one_timeline.to(`${scene_one_layers} > .layer-2`, {
+scene_one_timeline.fromTo(`${scene_one_layers} > .layer-2`, {}, {
   x: -50,
   duration: 8,
 }, 0);

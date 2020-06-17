@@ -4,46 +4,70 @@
     "subText": "This is the subtext of the novel",
     "author": "Author Name",
     "description": "This is a random description of what will be rendered",
-    "sceneStyles": {
-      "background": "./assets/header/cover.jpg",
-      "backgroundSize": "cover",
-      "backgroundPosition": "center center"
-    }
+    "styles": "background: url(./assets/header/cover.jpg);background-size: cover;background-position: center center;"
   },
   "scenes": [
     {
-      "sceneStyles": {},
+      "styles": "",
       "layers": {
         "sceneInfo": [
           {
             "position": "top-left",
-            "content":  "Transitions between multiple layered assets"
+            "content":  "Transitions between multiple layered assets",
+            "animation": {
+              "startAt": 1,
+              "from": {
+                "opacity": 0
+              },
+              "to": {
+                "opacity": 1,
+                "duration": 3
+              }
+            }
           },
           {
             "position": "bottom-right",
-            "content":  "Each image with their own styles"
+            "content":  "Each image with their own styles",
+            "animation": {
+              "startAt": 3.5,
+              "from": {
+                "opacity": 0
+              },
+              "to": {
+                "opacity": 1,
+                "duration": 3
+              }
+            }
           }
         ],
         "sceneAssets": [
           {
             "src": "./assets/scene_1/layer3.jpg",
-            "sceneStyles": {
-              "width": "100%",
-              "height": "100%"
-            }
+            "styles": "width: 100%; height: 100%;",
+            "animation": {}
           },
           {
             "src": "./assets/scene_1/layer2.jpg",
-            "sceneStyles": {
-              "left": "-300px",
-              "bottom": "0",
-              "height": "100%"
+            "styles": "bottom: -5px;left: -300px; height: 100%;",
+            "animation": {
+              "startAt": 0,
+              "from": {},
+              "to": {
+                "x": -100,
+                "duration": 8
+              }
             }
           },
           {
             "src": "./assets/scene_1/layer1.jpg",
-            "sceneStyles": {
-              "bottom": "0"
+            "styles": "bottom: 0;",
+            "animation": {
+              "startAt": 0,
+              "from": {},
+              "to": {
+                "x": -50,
+                "duration": 8
+              }
             }
           }
         ]
