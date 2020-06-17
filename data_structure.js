@@ -1,4 +1,20 @@
-{
+/**
+ * This is the dummy data that we will for the application for the first scenen to have a baseiss
+ * on how to make the functions that will render things
+ * 
+ * TODO:
+ * 
+ * 1. We need to make the factory that will generate the elements and its children
+ * 2. We need to take Payload and generate application init build DOM off payload
+ * 3. We take the animations after the dom elements are being built so we can create timeline instances for scenes
+ * 4. Create and attach animations from payload as tweens on the relevant timelines
+ * 5. create a loader that will load everything and then show
+ * 6. Cleanup code (remove old scene code) and update CSS to use variables
+ * 7. Responsive update for the application
+ * 8. look at new view that will render a list of novels and how to display it with below data as an array (ideally only details)
+ * 9. look into modelling out the API that will hold and research the backend infrustructure 
+ */
+const DUMMY_DATA = {
   "details": {
     "title": "title of the novel goes here",
     "subText": "This is the subtext of the novel",
