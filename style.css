@@ -5,7 +5,7 @@
 }
 
 /* header section and footer */
-header, section, footer {
+header, section {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -97,14 +97,6 @@ header {
   position: absolute;
   right: -10px;
   transform: skew(-15deg);
-}
-
-.scene-1 {
-  background: #000;
-}
-
-.scene-2 {
-  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
 
 .scene-3 {

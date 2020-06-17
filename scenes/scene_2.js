@@ -15,6 +15,56 @@ const scene_two = '.scene-2';
 const scene_two_layers = `${scene_two} > .layers`;
 
 /**
+ * TWEENS for each of the elements
+ */
+scene_two_timeline.to(`${scene_two_layers} > .layer-8`, {
+  height: 205,
+  duration: 8,
+}, 0);
+
+scene_two_timeline.to(`${scene_two_layers} > .layer-7`, {
+  y: -200,
+  duration: 8,
+}, 0);
+
+scene_two_timeline.to(`${scene_two_layers} > .layer-6`, {
+  y: -150,
+  duration: 8,
+}, 0);
+
+scene_two_timeline.to(`${scene_two_layers} > .layer-5`, {
+  y: -100,
+  duration: 8,
+}, 0);
+
+scene_two_timeline.to(`${scene_two_layers} > .layer-4`, {
+  y: -75,
+  duration: 8,
+}, 0);
+
+scene_two_timeline.to(`${scene_two_layers} > .layer-3`, {
+  y: -50,
+  duration: 8,
+}, 0);
+
+scene_two_timeline.to(`${scene_two_layers} > .layer-2`, {
+  y: -20,
+  duration: 8,
+}, 0);
+
+scene_two_timeline.to(`${scene_two_layers} > .layer-1`, {
+  y: -10,
+  duration: 8,
+}, 0);
+
+scene_two_timeline.fromTo(`${scene_two_layers} > .info-item-1`, {
+  opacity: 0,
+}, {
+  opacity: 1,
+  duration: 3,
+}, 1);
+
+/**
  * scroller events setup for the scenes
  */
 ScrollTrigger.create({
