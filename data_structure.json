@@ -1,0 +1,53 @@
+{
+  "details": {
+    "title": "title of the novel goes here",
+    "subText": "This is the subtext of the novel",
+    "author": "Author Name",
+    "description": "This is a random description of what will be rendered",
+    "sceneStyles": {
+      "background": "./assets/header/cover.jpg",
+      "backgroundSize": "cover",
+      "backgroundPosition": "center center"
+    }
+  },
+  "scenes": [
+    {
+      "sceneStyles": {},
+      "layers": {
+        "sceneInfo": [
+          {
+            "position": "top-left",
+            "content":  "Transitions between multiple layered assets"
+          },
+          {
+            "position": "bottom-right",
+            "content":  "Each image with their own styles"
+          }
+        ],
+        "sceneAssets": [
+          {
+            "src": "./assets/scene_1/layer3.jpg",
+            "sceneStyles": {
+              "width": "100%",
+              "height": "100%"
+            }
+          },
+          {
+            "src": "./assets/scene_1/layer2.jpg",
+            "sceneStyles": {
+              "left": "-300px",
+              "bottom": "0",
+              "height": "100%"
+            }
+          },
+          {
+            "src": "./assets/scene_1/layer1.jpg",
+            "sceneStyles": {
+              "bottom": "0"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
