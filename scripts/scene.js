@@ -8,13 +8,13 @@
  */
 function initScenes({ data }) {
   // loop over the scenes to render
-  let scene = 0;
-  while (scene < data.length) {
-    const { layers, styles } = data[scene];
+  let currentSceneIndex = 0;
+  while (currentSceneIndex < data.length) {
+    const { layers, styles } = data[currentSceneIndex];
     const sceneSectionElm = elFactory(
       'section',
       {
-        'class': `scene-${scene}`,
+        'class': `scene-${currentSceneIndex}`,
         'id': 'scene',
         'style': styles,
       }
@@ -23,15 +23,15 @@ function initScenes({ data }) {
     document.body.appendChild(sceneSectionElm);
 
     //here we need to create scene progressbar
-    initProgressBar(scene);
+    initProgressBar({ currentSceneIndex });
     //create the layers container
-    initLayersContainer(scene);
+    initLayersContainer({ currentSceneIndex });
     //here we need to create scene info layers
-    initSceneInfo({currentSceneData: layers, currentSceneIndex: scene});
+    initSceneInfo({currentSceneData: layers, currentSceneIndex });
     //here we need to create scene info layers
-    initSceneAssets({currentSceneData: layers, currentSceneIndex: scene});
+    initSceneAssets({currentSceneData: layers, currentSceneIndex });
 
-    scene++;
+    currentSceneIndex++;
   }
 }
 
@@ -39,7 +39,7 @@ function initScenes({ data }) {
  * render the progress bar for the current scene index
  * @param {int} currentSceneIndex current scene index we are rendering to
  */
-function initProgressBar(currentSceneIndex) {
+function initProgressBar({ currentSceneIndex }) {
   const currentSceneSectionElm = document.querySelector(`.scene-${currentSceneIndex}`);
   const sceneProgressBar = elFactory(
     'div',
@@ -57,7 +57,7 @@ function initProgressBar(currentSceneIndex) {
  * render the layers container where we have all the application layers in
  * @param {int} currentSceneIndex current scene index we are rendering to
  */
-function initLayersContainer(currentSceneIndex) {
+function initLayersContainer({ currentSceneIndex }) {
   const currentSceneSectionElm = document.querySelector(`.scene-${currentSceneIndex}`);
   const sceneLayersElm = elFactory('div', {'class': 'layers'});
 
@@ -70,7 +70,7 @@ function initLayersContainer(currentSceneIndex) {
  * @param {int} currentSceneData current scene data we are rendering to
  * @param {int} currentSceneIndex current scene index we are rendering to
  */
-function initSceneInfo({ currentSceneData, currentSceneIndex}) {
+function initSceneInfo({ currentSceneData, currentSceneIndex }) {
   const { sceneInfo } = currentSceneData;
   const currentSceneSectionElm = document.querySelector(`.scene-${currentSceneIndex} > .layers`);
   
@@ -102,15 +102,26 @@ function initSceneAssets({ currentSceneData, currentSceneIndex}) {
   let sceneAssetIndex = 0;
   while (sceneAssetIndex < sceneAssets.length) {
     const currentSceneAssetItem = sceneAssets[sceneAssetIndex];
-    const { src, styles } = currentSceneAssetItem;
-    const sceneAssetsItem = elFactory(
-      'img', 
-      {
-        'style': styles,
-        'src': src,
-        'class': `layer-${sceneAssetIndex}`
-      }
-    );
+    const { src, styles, isTransparent } = currentSceneAssetItem;
+    let sceneAssetsItem;
+    if(!isTransparent) {
+      sceneAssetsItem = elFactory(
+        'img', 
+        {
+          'style': styles,
+          'src': src,
+          'class': `layer-${sceneAssetIndex}`
+        }
+      );
+    } else {
+      sceneAssetsItem = elFactory(
+        'div', 
+        {
+          'style': styles,
+          'class': `layer-${sceneAssetIndex}`
+        }
+      );
+    }
     // append to the layers
     currentSceneSectionElm.appendChild(sceneAssetsItem);
     sceneAssetIndex++;

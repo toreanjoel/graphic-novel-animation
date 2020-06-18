@@ -12,5 +12,6 @@
    initScenes({ data: scenes });
    
    // create the scenes of the application
-  //  initAnimations({ data: scenes });
+   // might be easier to pass the data down to  this frim inside scenes?
+   initAnimations({ data: scenes });
  }, false);

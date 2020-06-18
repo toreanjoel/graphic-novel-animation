@@ -8,7 +8,7 @@ includeJs('./data_structure.js');
 // import the scene scripts from the scene folder
 includeJs('./scripts/header.js');
 includeJs('./scripts/scene.js');
-includeJs('./app.js');
+includeJs('./scripts/animations.js');
 
-// includeJs('./scenes/scene_1.js');
-// includeJs('./scenes/scene_2.js');
+// start the application
+includeJs('./app.js');
