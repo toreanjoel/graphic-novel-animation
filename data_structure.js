@@ -85,6 +85,42 @@ const DUMMY_DATA = {
       }
     },
     {
+      "styles": "",
+      "layers": {
+        "sceneInfo": [],
+        "sceneAssets": [
+          {
+            "isTransparent": true,
+            "styles": "width: 100%; height: 100%;background: url(./assets/scene_3/scene_3.jpg);background-size: cover;background-repeat: no-repeat",
+          },
+          {
+            "isTransparent": true,
+            "styles": "width: 100%; height: 100%;background: url(./assets/scene_3/scene_2.png);background-size: cover;position:absolute;background-position: 0vw;background-repeat: no-repeat;background-position-y: bottom;",
+            "animation": {
+              "startAt": 0,
+              "from": {},
+              "to": {
+                "scale": 0.8,
+                "bottom": "-=200",
+                "y": "+=150",
+              }
+            }
+          },
+          {
+            "isTransparent": true,
+            "styles": "width: 100%; height: 100%;background: url(./assets/scene_3/scene_1.png);background-size: cover;position:absolute;background-position: 0vw;background-repeat: no-repeat;background-position-y: bottom;",
+            "animation": {
+              "startAt": 0,
+              "from": {},
+              "to": {
+                "scale": 2,
+              }
+            }
+          },
+        ]
+      }
+    },
+    {
       "styles": "background-color: #FEDCC8;",
       "layers": {
         "sceneInfo": [
@@ -214,7 +250,7 @@ const DUMMY_DATA = {
             },
           }
         ]
-      }
+      },
     },
   ]
 }
