@@ -26,10 +26,17 @@ function initAnimations({ data }) {
 function initTimelines({ scenes }) {
   let scenesIndex = 0;
   while (scenesIndex < scenes.length) {
+    const currentScene = scenes[scenesIndex];
+    const { duration } = currentScene;
+    console.info('duration', currentScene)
     // here we setup the timelines in memory
     if (window.novelish[`scene-${scenesIndex}`] === undefined) {
       // create timeline
       window.novelish[`scene-${scenesIndex}`] = gsap.timeline();
+      // here we check if the scene has a duration set
+      if(duration) {
+        window.novelish[`scene-${scenesIndex}`].totalDuration(duration)
+      }
     }
     scenesIndex++;
   }
@@ -119,7 +126,7 @@ function initScrollTriggers({ scenes  }) {
       animation: timelineItem,
       trigger: `.${key}`,
       start: 'top top',
-      end: 'bottom center',
+      end: 'bottom top',
       scrub: 1,
       pin: true,
       // below we are keeping these but they will be commented out and used

@@ -25,18 +25,21 @@ const DUMMY_DATA = {
   "scenes": [
     {
       "styles": "",
+      "duration": 20,
       "layers": {
         "sceneInfo": [
           {
             "position": "top-left",
             "content":  "Transitions between multiple layered assets",
             "animation": {
-              "startAt": 1,
+              "startAt": 0,
               "from": {
-                "opacity": 0
+                "opacity": 0,
+                "duration": 8,
               },
               "to": {
                 "opacity": 1,
+                "duration": 8,
               }
             }
           },
@@ -46,10 +49,12 @@ const DUMMY_DATA = {
             "animation": {
               "startAt": 2.5,
               "from": {
-                "opacity": 0
+                "opacity": 0,
+                "duration": 8,
               },
               "to": {
                 "opacity": 1,
+                "duration": 8,
               }
             }
           }
@@ -67,6 +72,7 @@ const DUMMY_DATA = {
               "from": {},
               "to": {
                 "x": -100,
+                "duration": 12,
               }
             }
           },
@@ -78,6 +84,7 @@ const DUMMY_DATA = {
               "from": {},
               "to": {
                 "x": -50,
+                "duration": 12,
               }
             }
           }
@@ -121,7 +128,7 @@ const DUMMY_DATA = {
       }
     },
     {
-      "styles": "background-color: #FEDCC8;",
+      "styles": "background: linear-gradient(rgba(43, 72, 117, 0.976), rgb(180, 163, 152), rgba(12, 12, 108, 0.976));",
       "layers": {
         "sceneInfo": [
           {
@@ -141,12 +148,12 @@ const DUMMY_DATA = {
         "sceneAssets": [
           {
             "isTransparent": true,
-            "styles": "background-color: #FEDCC8;width: 100%;height:100%",
+            "styles": "background: linear-gradient(rgba(43, 72, 117, 0.976), rgb(102, 69, 49), rgba(12, 12, 108, 0.976));width: 100%;height:100%",
             "animation": {
               "startAt": 0,
               "from": {},
               "to": {
-                "background": "linear-gradient(rgb(85, 45, 100), rgb(44, 74, 120), rgb(12, 12, 110))",
+                "background": "linear-gradient(rgba(43, 72, 117, 0.976), rgb(89, 49, 102), rgba(12, 12, 108, 0.976))",
               },
             },
           },
