@@ -35,7 +35,7 @@ function initTimelines({ scenes }) {
       window.novelish[`scene-${scenesIndex}`] = gsap.timeline();
       // here we check if the scene has a duration set
       if(duration) {
-        window.novelish[`scene-${scenesIndex}`].totalDuration(duration)
+        window.novelish[`scene-${scenesIndex}`].timeScale(0.5)
       }
     }
     scenesIndex++;
@@ -127,7 +127,7 @@ function initScrollTriggers({ scenes  }) {
       trigger: `.${key}`,
       start: 'top top',
       end: 'bottom top',
-      scrub: 1,
+      scrub: true,
       pin: true,
       // below we are keeping these but they will be commented out and used
       // for a later time
