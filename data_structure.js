@@ -92,7 +92,7 @@ const DUMMY_DATA = {
             "position": "top-left",
             "content":  "Firewatch scene info",
             "animation": {
-              "startAt": 1,
+              "startAt": 0,
               "from": {
                 "opacity": 0
               },
@@ -104,12 +104,30 @@ const DUMMY_DATA = {
         ],
         "sceneAssets": [
           {
+            "isTransparent": true,
+            "styles": "background-color: #FEDCC8;width: 100%;height:100%",
+            "animation": {
+              "startAt": 0,
+              "from": {},
+              "to": {
+                "background": "linear-gradient(rgb(85, 45, 100), rgb(44, 74, 120), rgb(12, 12, 110))",
+              },
+            },
+          },
+          {
             "src": "assets/scene_2/moon.png",
-            "styles": "bottom: 30vh;left: 50vw;",
+            "styles": "bottom: 50vh;left: 50%",
+            "animation": {
+              "startAt": 0,
+              "from": {},
+              "to": {
+                "y": "-=50",
+              },
+            }
           },
           {
             "src": "assets/scene_2/layer_0.png",
-            "styles": "width: 100%;bottom:0",
+            "styles": "width: 100%;bottom:20%",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -120,7 +138,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_1.png",
-            "styles": "width: 100%;bottom:0",
+            "styles": "width: 100%;bottom:20%",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -131,7 +149,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_2.png",
-            "styles": "width: 100%;bottom:0",
+            "styles": "width: 100%;bottom:20%",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -142,7 +160,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_3.png",
-            "styles": "width: 100%;bottom:0",
+            "styles": "width: 100%;bottom:20%",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -153,7 +171,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_4.png",
-            "styles": "width: 100%;bottom:0",
+            "styles": "width: 100%;bottom:20%",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -164,7 +182,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_5.png",
-            "styles": "width: 100%;bottom:0",
+            "styles": "width: 100%;bottom:20%",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -175,7 +193,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_6.png",
-            "styles": "width: 100%;bottom:-10px",
+            "styles": "width: 100%;bottom:300px",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -185,13 +203,13 @@ const DUMMY_DATA = {
             },
           },
           {
-            "styles": "height:0; width:100%;background: #2d112b;position:absolute;bottom:0",
+            "styles": "height:310px; width:100%;background: #2d112b;bottom:0",
             "isTransparent": true,
             "animation": {
               "startAt": 0,
               "from": {},
               "to": {
-                "height": 200,
+                "height": "+=200",
               },
             },
           }
