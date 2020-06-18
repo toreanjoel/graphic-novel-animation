@@ -44,7 +44,7 @@ const DUMMY_DATA = {
             "position": "bottom-right",
             "content":  "Each image with their own styles",
             "animation": {
-              "startAt": 3.5,
+              "startAt": 2.5,
               "from": {
                 "opacity": 0
               },
@@ -121,7 +121,7 @@ const DUMMY_DATA = {
               "startAt": 0,
               "from": {},
               "to": {
-                "y": "-=50",
+                "y": "+=50",
               },
             }
           },
@@ -193,7 +193,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_6.png",
-            "styles": "width: 100%;bottom:300px",
+            "styles": "width: 100%;bottom:20%",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -203,7 +203,7 @@ const DUMMY_DATA = {
             },
           },
           {
-            "styles": "height:310px; width:100%;background: #2d112b;bottom:0",
+            "styles": "height:21%; width:100%;background: #2d112b;bottom:0",
             "isTransparent": true,
             "animation": {
               "startAt": 0,
