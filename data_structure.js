@@ -63,7 +63,7 @@ const DUMMY_DATA = {
             "animation": {}
           },
           {
-            "src": "./assets/scene_1/layer2.jpg",
+            "src": "./assets/scene_1/layer2.png",
             "styles": "bottom: -5px;left: -300px; height: 100%;",
             "animation": {
               "startAt": 0,
@@ -75,7 +75,7 @@ const DUMMY_DATA = {
             }
           },
           {
-            "src": "./assets/scene_1/layer1.jpg",
+            "src": "./assets/scene_1/layer1.png",
             "styles": "bottom: 0;",
             "animation": {
               "startAt": 0,

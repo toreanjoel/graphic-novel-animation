@@ -6,5 +6,9 @@ includeJs('./libraries/gsap/minified/ScrollTrigger.min.js');
 includeJs('./data_structure.js');
 
 // import the scene scripts from the scene folder
-includeJs('./scenes/scene_1.js');
-includeJs('./scenes/scene_2.js');
+includeJs('./scripts/header.js');
+includeJs('./scripts/scene.js');
+includeJs('./app.js');
+
+// includeJs('./scenes/scene_1.js');
+// includeJs('./scenes/scene_2.js');
