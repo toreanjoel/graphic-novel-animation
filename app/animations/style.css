@@ -11,3 +11,16 @@
     transform: translateY(calc(-0.5 * var(--default-spacing)));
   }
 }
+
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: calc(var(--default-spacing) * 7.2);
+    height: calc(var(--default-spacing) * 7.2);
+    opacity: 0;
+  }
+}

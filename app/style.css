@@ -13,3 +13,26 @@ header, section {
   align-items: center;
   font-family: var(--font-monospace);
 }
+
+/* application loader */
+.loading {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-000);
+}
+
+.loading div {
+  position: absolute;
+  border: calc(var(--default-spacing) * 0.4) solid var(--color-FFF);
+  opacity: 1;
+  border-radius: 50%;
+  animation: ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.loading div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
