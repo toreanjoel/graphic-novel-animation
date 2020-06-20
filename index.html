@@ -3,6 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" as="style" href="./app/variables.css" />
+  <link rel="preload" as="style" href="./app/style.css" />
+  <link rel="preload" href="./utils/helpers.js" as="script">
+  <link rel="preload" href="./utils/imports.js" as="script">
+
+  <link rel="stylesheet" href="./app/variables.css" />
+  <link rel="stylesheet" href="./app/style.css" />
   <title>Novelish</title>
 </head>
 <body>
@@ -10,10 +17,10 @@
   <div class="loading">
     <div></div>
     <div class="loading--animation"><div></div><div></div></div>
-    <div class="loading--percent"></div>
+    <div class="loading--percent">Loading...</div>
     <div></div>
   </div>
-  <script src='./utils/helpers.js'></script>
-  <script src='./utils/imports.js'></script>
+  <script src='./utils/helpers.js' defer></script>
+  <script src='./utils/imports.js' defer></script>
 </body>
 </html>

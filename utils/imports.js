@@ -1,6 +1,4 @@
 //import stylesheets
-cssJsImport({ path:'./app/variables.css', type: 'css' });
-cssJsImport({ path:'./app/style.css', type: 'css' });
 cssJsImport({ path:'./app/header/style.css', type: 'css' });
 cssJsImport({ path:'./app/scene/style.css', type: 'css' });
 cssJsImport({ path:'./app/animations/style.css', type: 'css' });
