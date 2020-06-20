@@ -1,0 +1,44 @@
+/* Header styles */
+
+header {
+  color: var(--color-FFF);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-monospace);
+}
+
+.novel_details {
+  background: var(--color-000);
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: calc(var(--default-spacing)*40);
+}
+
+.novel_info {
+  padding: calc(var(--default-spacing)*1.5) calc(var(--default-spacing)*1.5) calc(var(--default-spacing)*6) calc(var(--default-spacing)*1.5);
+}
+
+.novel_info div {
+  padding: var(--default-spacing) 0;
+}
+
+.novel_info hr {
+  opacity: 0.1;
+}
+
+.novel_scroll {
+  text-align: center;
+  position: absolute;
+  bottom: var(--default-spacing);
+  left: 50%;
+}
+
+.scroll-indicator {
+  text-align: center;
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}

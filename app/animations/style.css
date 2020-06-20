@@ -1,0 +1,13 @@
+/* animations and keyframes*/
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(calc(-1 * var(--default-spacing)));
+  }
+  60% {
+    transform: translateY(calc(-0.5 * var(--default-spacing)));
+  }
+}

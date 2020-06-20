@@ -1,0 +1,17 @@
+/**Application variables*/
+:root {
+  /* Colors */
+  --color-000: #000;
+  --color-FFF: #fff;
+  --color-F00: #f00;
+  --color-FF7E00: #FF7E00;
+  --color-940BA2: #940BA2;
+  --color-008AFF: #008AFF;
+  --color-FF0048: #FF0048;
+  
+  /* Spacing */
+  --default-spacing: 10px;
+
+  /* Fonts */
+  --font-monospace: monospace;
+}

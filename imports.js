@@ -1,14 +1,21 @@
+//import stylesheets
+cssJsImport({ path:'./app/variables.css', type: 'css' });
+cssJsImport({ path:'./app/style.css', type: 'css' });
+cssJsImport({ path:'./app/header/style.css', type: 'css' });
+cssJsImport({ path:'./app/scene/style.css', type: 'css' });
+cssJsImport({ path:'./app/animations/style.css', type: 'css' });
+
 //import libraries
-includeJs('./libraries/gsap/minified/gsap.min.js');
-includeJs('./libraries/gsap/minified/ScrollTrigger.min.js');
+cssJsImport({ path:'./scripts/libraries/gsap/minified/gsap.min.js', type: 'js' });
+cssJsImport({ path:'./scripts/libraries/gsap/minified/ScrollTrigger.min.js', type: 'js' });
 
-// include dummy data
-includeJs('./data_structure.js');
-
-// import the scene scripts from the scene folder
-includeJs('./scripts/header.js');
-includeJs('./scripts/scene.js');
-includeJs('./scripts/animations.js');
-
-// start the application
-includeJs('./app.js');
+// TODO: REMOVE BELOW DUMMY DATA
+cssJsImport({ path:'./data_structure.js', type: 'js' });
+// header logic
+cssJsImport({ path:'./app/header/index.js', type: 'js' });
+// scene logic
+cssJsImport({ path:'./app/scene/index.js', type: 'js' });
+// animations
+cssJsImport({ path:'./app/animations/index.js', type: 'js' });
+//root init of application
+cssJsImport({ path:'./app/index.js', type: 'js' });

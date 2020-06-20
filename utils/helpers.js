@@ -1,15 +1,22 @@
 /**
- * This will import the files and dynaically add them to the dom
- * @param {string} jsFilePath 
+ * General JS/CSS import helper
+ * @param {string} path the path of the file we want to add
+ * @param {string} type if its a style or script
  */
-function includeJs(jsFilePath) {
-  var js = document.createElement('script');
+function cssJsImport({ path, type }) {
+  const isJS = type === 'js';
+  const fileType = isJS ? 'script' : 'link';
+  const fileAttributes = isJS ? {
+    type: 'text/javascript',
+    src: path,
+  } : {
+    rel: 'stylesheet',
+    href: path,
+  };
 
-  js.type = 'text/javascript';
-  js.src = jsFilePath;
-
-  document.body.appendChild(js);
-  return js;
+  const includedFile = elFactory(fileType, fileAttributes);
+  const parentElm = isJS ? document.body : document.head;
+  parentElm.appendChild(includedFile);
 }
 
 /**

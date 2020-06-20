@@ -77,7 +77,7 @@ function initScrollerIndicator() {
       { 'class': 'novel_scroll-icon'},
       elFactory(
         'div',
-        { 'class': 'bounce' },
+        { 'class': 'scroll-indicator' },
         'scroll'
       )
     )

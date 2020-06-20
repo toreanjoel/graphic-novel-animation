@@ -28,7 +28,6 @@ function initTimelines({ scenes }) {
   while (scenesIndex < scenes.length) {
     const currentScene = scenes[scenesIndex];
     const { duration } = currentScene;
-    console.info('duration', currentScene)
     // here we setup the timelines in memory
     if (window.novelish[`scene-${scenesIndex}`] === undefined) {
       // create timeline
