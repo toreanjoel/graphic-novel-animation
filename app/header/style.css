@@ -12,9 +12,9 @@ header {
 .novel_details {
   background: var(--color-000);
   position: absolute;
-  left: 0;
-  height: 100%;
-  width: calc(var(--default-spacing)*40);
+  bottom: 0;
+  width: 100%;
+  max-height: calc(var(--default-spacing)*30);
 }
 
 .novel_info {

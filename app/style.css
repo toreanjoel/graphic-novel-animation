@@ -16,6 +16,7 @@ header, section {
   justify-content: center;
   align-items: center;
   font-family: var(--font-monospace);
+  max-width: 100%;
 }
 
 /* application loader */

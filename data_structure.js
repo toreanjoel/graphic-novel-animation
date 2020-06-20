@@ -103,15 +103,6 @@ const DUMMY_DATA = {
           {
             "isTransparent": true,
             "styles": "width: 100%; height: 100%;background: url(./assets/scene_3/scene_2.png);background-size: cover;position:absolute;background-position: 0vw;background-repeat: no-repeat;background-position-y: bottom;",
-            "animation": {
-              "startAt": 0,
-              "from": {},
-              "to": {
-                "scale": 0.8,
-                "bottom": "-=200",
-                "y": "+=150",
-              }
-            }
           },
           {
             "isTransparent": true,
@@ -170,7 +161,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_0.png",
-            "styles": "width: 100%;bottom:20%",
+            "styles": "width: 100%;bottom: 120px",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -181,7 +172,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_1.png",
-            "styles": "width: 100%;bottom:20%",
+            "styles": "width: 100%;bottom: 120px",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -192,7 +183,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_2.png",
-            "styles": "width: 100%;bottom:20%",
+            "styles": "width: 100%;bottom: 120px",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -203,7 +194,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_3.png",
-            "styles": "width: 100%;bottom:20%",
+            "styles": "width: 100%;bottom: 120px",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -214,7 +205,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_4.png",
-            "styles": "width: 100%;bottom:20%",
+            "styles": "width: 100%;bottom: 120px",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -225,7 +216,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_5.png",
-            "styles": "width: 100%;bottom:20%",
+            "styles": "width: 100%;bottom: 120px",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -236,7 +227,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_6.png",
-            "styles": "width: 100%;bottom:20%",
+            "styles": "width: 100%;bottom: 120px",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -246,7 +237,7 @@ const DUMMY_DATA = {
             },
           },
           {
-            "styles": "height:21%; width:100%;background: #2d112b;bottom:0",
+            "styles": "height:130px; width:100%;background: #2d112b;bottom:0",
             "isTransparent": true,
             "animation": {
               "startAt": 0,
