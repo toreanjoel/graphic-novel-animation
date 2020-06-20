@@ -16,9 +16,9 @@
  */
 const DUMMY_DATA = {
   "details": {
-    "title": "title of the novel goes here",
-    "subText": "This is the subtext of the novel",
-    "author": "Author Name",
+    "title": "Some Epic Title Here",
+    "subText": "Something crazyz is summarized here..",
+    "author": "TrojanMorse",
     "description": "This is a random description of what will be rendered",
     "styles": "background: url(./assets/header/cover.jpg);background-size: cover;background-position: center center;"
   },

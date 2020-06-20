@@ -10,15 +10,31 @@ header {
 }
 
 .novel_details {
-  background: var(--color-000);
   position: absolute;
   bottom: 0;
   width: 100%;
   max-height: calc(var(--default-spacing)*30);
+  font-size: 2em;
+  /* text-shadow: calc(var(--default-spacing)*0.3) 0px calc(var(--default-spacing)*0.3) var(--color-000); */
+  text-shadow:
+    calc(-0.1 * var(--default-spacing)) 0 var(--color-000),
+    0 calc(var(--default-spacing)*0.1) var(--color-000),
+    calc(var(--default-spacing)*0.1) 0 var(--color-000),
+    0 calc(-0.1 * var(--default-spacing)) var(--color-000);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .novel_info {
-  padding: calc(var(--default-spacing)*1.5) calc(var(--default-spacing)*1.5) calc(var(--default-spacing)*6) calc(var(--default-spacing)*1.5);
+  padding: calc(var(--default-spacing)*1.5) calc(var(--default-spacing)*1.5) calc(var(--default-spacing)*2) calc(var(--default-spacing)*1.5);
+}
+
+.novel_info-title {
+  font-size: calc(var(--default-spacing)*2.5);
+}
+
+.novel_info-sub-text {
+  font-size: calc(var(--default-spacing)*2);
 }
 
 .novel_info div {

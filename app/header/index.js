@@ -46,17 +46,17 @@ function initNovelDetails(details) {
         { 'class': 'novel_info-sub-text' },
         subText
       ),
+      elFactory('hr', {}),
       elFactory(
         'div',
         { 'class': 'novel_info-author' },
         author
       ),
-      elFactory('hr', {}),
-      elFactory(
-        'div',
-        { 'class': 'novel_info-description' },
-        description
-      )
+      // elFactory(
+      //   'div',
+      //   { 'class': 'novel_info-description' },
+      //   description
+      // )
     )
   );
   // here we first append the novel details section 
