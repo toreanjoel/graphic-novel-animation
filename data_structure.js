@@ -161,7 +161,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_0.png",
-            "styles": "width: 100%;bottom: 120px",
+            "styles": "width: 100%;bottom: 30px",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -172,7 +172,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_1.png",
-            "styles": "width: 100%;bottom: 120px",
+            "styles": "width: 100%;bottom: 30px",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -183,7 +183,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_2.png",
-            "styles": "width: 100%;bottom: 120px",
+            "styles": "width: 100%;bottom: 30px",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -194,7 +194,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_3.png",
-            "styles": "width: 100%;bottom: 120px",
+            "styles": "width: 100%;bottom: 30px",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -205,7 +205,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_4.png",
-            "styles": "width: 100%;bottom: 120px",
+            "styles": "width: 100%;bottom: 30px",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -216,7 +216,7 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_5.png",
-            "styles": "width: 100%;bottom: 120px",
+            "styles": "width: 100%;bottom: 30px",
             "animation": {
               "startAt": 0,
               "from": {},
@@ -227,23 +227,23 @@ const DUMMY_DATA = {
           },
           {
             "src": "assets/scene_2/layer_6.png",
-            "styles": "width: 100%;bottom: 120px",
+            "styles": "width: 100%;bottom: 30px",
             "animation": {
               "startAt": 0,
               "from": {},
               "to": {
-                "y": -200,
+                "y": -130,
               },
             },
           },
           {
-            "styles": "height:130px; width:100%;background: #2d112b;bottom:0",
+            "styles": "height:31px; width:100%;background: #2d112b;bottom:0",
             "isTransparent": true,
             "animation": {
               "startAt": 0,
               "from": {},
               "to": {
-                "height": "+=200",
+                "height": "+=130",
               },
             },
           }
