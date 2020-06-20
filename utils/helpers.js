@@ -45,3 +45,20 @@ function elFactory(type, attributes, ...children) {
 
   return el
 }
+
+/**
+ * loader for the application will update the dom and the styles to know if it should show or not
+ * @param {bool} showLoader flag that will be used to toggle the styles of the inital loader element 
+ * @param {int} percentLoaded the ammount loaded so far
+ */
+function globalLoaderToggle({ showLoader, percentLoaded }) {
+  const loadingElm = document.querySelector(".loading");
+  const bodyElm = document.querySelector('body');
+
+  if(!showLoader) {
+    loadingElm.style.display = 'none';
+    bodyElm.style.overflowY = 'visible'
+  } else {
+    // here we can take a value and update a custom loader
+  }
+}

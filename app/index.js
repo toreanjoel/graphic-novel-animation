@@ -1,22 +1,27 @@
 /**
  * app root that will render and fire off methods to render dom accordinly
  */
-const loadingElm = document.querySelector(".loading");
-const bodyElm = document.querySelector('body');
+
+
+// add asasets loaded array and listen when array is being pushed to
+const LOADED_ASSETS = [];
 
 /**
- * loader for the application will update the dom and the styles to know if it should show or not
- * @param {bool} showLoader flag that will be used to toggle the styles of the inital loader element 
+ * This will run and make sure the images of all the layers are loaded on the application
+ * and displaying before we stop the loader
  */
-function toggleLoader({ showLoader }) {
-  const loadingElm = document.querySelector(".loading");
-  const bodyElm = document.querySelector('body');
-
-  if(showLoader) {
-    bodyElm.style.overflowY = 'hidden'
-  } else {
-    loadingElm.style.display = 'none';
-    bodyElm.style.overflowY = 'visible'
+function checkAssetsForScenesReady() {
+  const layersElms = document.querySelectorAll('img');
+  const assetsLength = layersElms.length;
+  let imgAsset = 0;
+  while (imgAsset < assetsLength) {
+    const currentLayer = layersElms[imgAsset];
+    currentLayer.addEventListener('load', () => {
+      LOADED_ASSETS.push(currentLayer);
+      // here we push and check if the assets are all in.
+      globalLoaderToggle({ showLoader: LOADED_ASSETS.length !== assetsLength });
+    });
+    imgAsset++;
   }
 }
 
@@ -32,17 +37,14 @@ function initApp() {
   // create the scenes of the application
   // might be easier to pass the data down to  this frim inside scenes?
   initAnimations({ data: scenes });
-
-  // toggle loader based off dom content
-  toggleLoader({ showLoader: false });
+  // make sure scene images are all ready
+  checkAssetsForScenesReady();
 }
 
 /**
  * Here we check if the application is ready to show the content else show the loader
  */
 if (document.readyState == 'loading') {
-  // toggle loader based off dom content
-  toggleLoader({ showLoader: true });
   // loading yet, wait for the event
   document.addEventListener('DOMContentLoaded', initApp);
 } else {
