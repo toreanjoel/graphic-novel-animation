@@ -52,13 +52,24 @@ function elFactory(type, attributes, ...children) {
  * @param {int} percentLoaded the ammount loaded so far
  */
 function globalLoaderToggle({ showLoader, percentLoaded }) {
-  const loadingElm = document.querySelector(".loading");
+  const loadingElm = document.querySelector('.loading');
   const bodyElm = document.querySelector('body');
+  const percentageElm = document.querySelector('.loading--percent');
 
   if(!showLoader) {
     loadingElm.style.display = 'none';
     bodyElm.style.overflowY = 'visible'
   } else {
     // here we can take a value and update a custom loader
+    percentageElm.textContent = `${percentLoaded}%`
   }
+}
+
+/**
+ * this will workout and return the percentage of current two passed values
+ * @param {int} currentValue the current value we are 
+ * @param {int} outOf the sum value we set as the 100% mark
+ */
+function calculatePercentage({ currentValue, outOf }) {
+  return ((currentValue/outOf) * 100).toFixed(0);
 }

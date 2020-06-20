@@ -18,7 +18,7 @@ function initHeader({ data }) {
   // here we add the children to the header Elm
   initNovelDetails(data);
   // here we add the children to the header Elm
-  initScrollerIndicator(data);
+  // initScrollerIndicator(data);
 }
 
 /**

@@ -19,7 +19,13 @@ function checkAssetsForScenesReady() {
     currentLayer.addEventListener('load', () => {
       LOADED_ASSETS.push(currentLayer);
       // here we push and check if the assets are all in.
-      globalLoaderToggle({ showLoader: LOADED_ASSETS.length !== assetsLength });
+      globalLoaderToggle({
+        showLoader: LOADED_ASSETS.length !== assetsLength,
+        percentLoaded: calculatePercentage({
+          currentValue: LOADED_ASSETS.length,
+          outOf: assetsLength,
+        })
+      });
     });
     imgAsset++;
   }

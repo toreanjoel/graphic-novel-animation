@@ -20,15 +20,26 @@ header, section {
 
 /* application loader */
 .loading {
-  position: relative;
-  display: flex;
+  display: grid;
   height: 100vh;
+  background: var(--color-000);
+  color: var(--color-999);
+  grid-template-rows: 1fr calc(var(--default-spacing)*10) var(--default-spacing) 1fr;
   align-items: center;
   justify-content: center;
-  background: var(--color-000);
 }
 
-.loading div {
+.loading--percent {
+  position: relative;
+}
+
+.loading--animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading--animation div {
   position: absolute;
   border: calc(var(--default-spacing) * 0.4) solid var(--color-FFF);
   opacity: 1;
@@ -36,7 +47,7 @@ header, section {
   animation: ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 
-.loading div:nth-child(2) {
+.loading--animation div:nth-child(2) {
   animation-delay: -0.5s;
 }
 
