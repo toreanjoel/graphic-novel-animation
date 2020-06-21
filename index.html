@@ -6,8 +6,14 @@
   <link rel="apple-touch-icon" href="./assets/icons/icon-256.png">
   <meta name="theme-color" content="#000"/>
   <link rel="manifest" crossorigin="use-credentials" href="./manifest.webmanifest">
+  <!-- preloading asseets -->
+
+  <!-- importing assets -->
   <link rel="stylesheet" href="./app/variables.css" />
   <link rel="stylesheet" href="./app/style.css" />
+  <link rel="stylesheet" href="./app/header/style.css" />
+  <link rel="stylesheet" href="./app/scene/style.css" />
+  <link rel="stylesheet" href="./app/animations/style.css" />
   <title>Novelish</title>
 </head>
 <body>
@@ -19,11 +25,16 @@
     <div></div>
   </div>
   <!-- lobraries -->
-  <script src='./scripts/libraries/gsap/minified/gsap.min.js' defer></script>
-  <script src='./scripts/libraries/gsap/minified/ScrollTrigger.min.js' defer></script>
+  <script src='./scripts/libraries/gsap/gsap.min.js'></script>
+  <script src='./scripts/libraries/gsap/ScrollTrigger.min.js'></script>
   <!-- dummy data below -->
-  <script src='./data_structure.js' defer></script>
-  <script src='./utils/helpers.js' defer></script>
-  <script src='./utils/imports.js' defer></script>
+  <script src='./data_structure.js'></script>
+  <script src='./utils/helpers.js'></script>
+  <!-- application functions -->
+  <script src='./app/header/index.js'></script>
+  <script src='./app/scene/index.js'></script>
+  <script src='./app/animations/index.js'></script>
+  <!-- <script src='./utils/imports.js'></script> -->
+  <script src='./app/index.js'></script>
 </body>
 </html>

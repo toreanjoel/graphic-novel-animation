@@ -109,7 +109,7 @@ function initSceneAssets({ currentSceneData, currentSceneIndex}) {
         'img', 
         {
           'style': styles,
-          'src': `${src}?cache=${Date.now()}`,
+          'src': src,
           'class': `layer-${sceneAssetIndex}`
         }
       );

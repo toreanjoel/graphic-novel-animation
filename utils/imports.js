@@ -9,5 +9,3 @@ cssJsImport({ path:'./app/header/index.js', type: 'js' });
 cssJsImport({ path:'./app/scene/index.js', type: 'js' });
 // animations
 cssJsImport({ path:'./app/animations/index.js', type: 'js' });
-//root init of application
-cssJsImport({ path:'./app/index.js', type: 'js' });

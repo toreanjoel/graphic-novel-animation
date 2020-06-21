@@ -5,6 +5,24 @@
   box-sizing: border-box;
 }
 
+/* SCROLL BAR STYLES */
+/* width */
+body::-webkit-scrollbar {
+  width: calc(var(--default-spacing)*0.7);
+  background: var(--color-999);
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  border-radius: var(--default-spacing);
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: var(--color-333);
+}
+
+
 body {
   overflow-y: hidden;
 }

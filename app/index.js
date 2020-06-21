@@ -32,6 +32,15 @@ function checkAssetsForScenesReady() {
 }
 
 /**
+ * Register servive worker on a new thread if its able to and then run service worker code
+ */
+function initServiceWorker() {
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('../sw.js'); // register the service worker in the root app level
+  };
+}
+
+/**
  * initialuize tha pplication and load dom elements
  */
 function initApp() {
@@ -45,6 +54,8 @@ function initApp() {
   initAnimations({ data: scenes });
   // make sure scene images are all ready
   checkAssetsForScenesReady();
+  // init the service worker
+  initServiceWorker();
 }
 
 /**
