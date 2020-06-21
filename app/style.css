@@ -1,3 +1,8 @@
+@import './variables.css';
+@import './animations/style.css';
+@import './header/style.css';
+@import './scene/style.css';
+
 /* Base styles */
 * {
   padding: 0;
