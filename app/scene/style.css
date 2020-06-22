@@ -18,7 +18,6 @@
   margin:0;
   padding: calc(var(--default-spacing)*1.5) calc(var(--default-spacing)*6.3);
   z-index: 1000;
-  font-size: calc(var(--default-spacing)*2);
   opacity: 0;
 }
 

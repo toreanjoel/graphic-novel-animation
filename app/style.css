@@ -1,4 +1,5 @@
 @import './variables.css';
+@import './responsive.css';
 @import './animations/style.css';
 @import './header/style.css';
 @import './scene/style.css';
@@ -30,6 +31,7 @@ body::-webkit-scrollbar-thumb {
 
 body {
   overflow-y: hidden;
+  background: var(--color-000);
 }
 
 /* header section and footer */
@@ -40,6 +42,7 @@ header, section {
   align-items: center;
   font-family: var(--font-monospace);
   max-width: 100%;
+  margin: 0 auto;
 }
 
 /* application loader */
