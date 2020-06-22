@@ -130,7 +130,7 @@ function initScrollTriggers({ scenes  }) {
       // pin: true,
       // below we are keeping these but they will be commented out and used
       // for a later time
-      markers: true,
+      // markers: true,
       toggleClass: 'sceneActive',
       onEnter: () => console.info('enter the trigger'),
       onLeave: () => console.info('leave the trigger'),
