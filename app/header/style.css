@@ -1,14 +1,5 @@
 /* Header styles */
 
-header {
-  color: var(--color-FFF);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: var(--font-monospace);
-}
-
 .novel_details {
   position: absolute;
   bottom: 0;

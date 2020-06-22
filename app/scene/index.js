@@ -126,4 +126,5 @@ function initSceneAssets({ currentSceneData, currentSceneIndex}) {
     currentSceneSectionElm.appendChild(sceneAssetsItem);
     sceneAssetIndex++;
   }
+  currentSceneSectionElm.appendChild(elFactory('div', {'class': `layer-spacer`}));
 }

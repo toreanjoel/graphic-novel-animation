@@ -9,6 +9,15 @@
   justify-content: center;
   align-items: center;
   font-family: var(--font-monospace);
+  filter: blur(calc(var(--default-spacing)*0.5)) grayscale(1);
+  transition: all 1s ease;
+  margin-top: calc(var(--default-spacing)*5);
+  margin-bottom: calc(var(--default-spacing)*5);
+}
+
+.sceneActive {
+  filter: blur(0px) grayscale(0) !important;
+  transition: all 1s ease !important;
 }
 
 /* The info where we show more information for the scene and where they are positioned*/
@@ -22,17 +31,18 @@
 }
 
 .top-left {
-  left: calc(-1 * var(--default-spacing));
+  /* left: calc(-1 * var(--default-spacing)); */
   position:absolute;
   top:0;
-  transform:skew(-15deg);
+  /* transform:skew(-15deg); */
 }
 
 .bottom-right {
   bottom: 0;
   position: absolute;
-  right: calc(-1 * var(--default-spacing));
-  transform: skew(-15deg);
+  right: 0;
+  /* right: calc(-1 * var(--default-spacing)); */
+  /* transform: skew(-15deg); */
 }
 
 /* layers section */

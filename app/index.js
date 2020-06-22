@@ -49,7 +49,8 @@ function initApp() {
   initHeader({ data: details });
   // create the scenes of the application
   initScenes({ data: scenes });
-  // create the scenes of the application
+  // create the header of the application
+  initFooter({ data: details });
   // might be easier to pass the data down to  this frim inside scenes?
   initAnimations({ data: scenes });
   // make sure scene images are all ready

@@ -2,6 +2,7 @@
 @import './responsive.css';
 @import './animations/style.css';
 @import './header/style.css';
+@import './footer/style.css';
 @import './scene/style.css';
 
 /* Base styles */
@@ -34,9 +35,13 @@ body {
   background: var(--color-000);
 }
 
-/* header section and footer */
-header, section {
+header, footer {
   height: 100vh;
+  color: var(--color-FFF);
+}
+
+/* header section and footer */
+header, footer, section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,8 +52,11 @@ header, section {
 
 /* application loader */
 .loading {
+  position: absolute;
+  width: 100%;
   display: grid;
   height: 100vh;
+  z-index: 9999;
   background: var(--color-000);
   color: var(--color-999);
   grid-template-rows: 1fr calc(var(--default-spacing)*10) var(--default-spacing) 1fr;

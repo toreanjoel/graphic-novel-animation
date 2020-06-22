@@ -124,13 +124,13 @@ function initScrollTriggers({ scenes  }) {
     ScrollTrigger.create({
       animation: timelineItem,
       trigger: `.${key}`,
-      start: 'top top',
+      start: '10% center',
       end: 'bottom center',
       scrub: true,
-      pin: true,
+      // pin: true,
       // below we are keeping these but they will be commented out and used
       // for a later time
-      // markers: true,
+      markers: true,
       toggleClass: 'sceneActive',
       onEnter: () => console.info('enter the trigger'),
       onLeave: () => console.info('leave the trigger'),
@@ -149,8 +149,10 @@ function initScrollTriggers({ scenes  }) {
  */
 function progressBar(currentContextScene) {
   const { pin } = currentContextScene;
-  const currentElmProgressBar = pin.querySelector('#progressbar');
-  if(currentElmProgressBar) {
-    currentElmProgressBar.style.width = `${currentContextScene.progress * 100}%`;
+  if (pin) {
+    const currentElmProgressBar = pin.querySelector('#progressbar');
+    if(currentElmProgressBar) {
+      currentElmProgressBar.style.width = `${currentContextScene.progress * 100}%`;
+    }
   }
 }

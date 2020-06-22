@@ -2,7 +2,33 @@
 
 @media only screen and (min-width: 980px) {
   section {
-    width: 80%;
-    height: 50vh;
+    width: calc(var(--default-spacing) * 128);
+    height: 50vh !important;
+  }
+
+  .pin-spacer {
+    height: 50vh !important;
+  }
+}
+
+@media only screen and (max-height: 620px) {
+  section {
+    height: 25vh !important;
+    margin: 0 auto !important;
+  }
+
+  .pin-spacer {
+    height: 25vh !important;
+  }
+}
+
+@media only screen and (min-height: 500px) {
+  section {
+    height: 33.3vh !important;
+    margin: 0 auto !important;
+  }
+
+  .pin-spacer {
+    height: 33.3vh !important;
   }
 }

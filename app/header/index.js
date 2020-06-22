@@ -17,8 +17,7 @@ function initHeader({ data }) {
 
   // here we add the children to the header Elm
   initNovelDetails(data);
-  // here we add the children to the header Elm
-  // initScrollerIndicator(data);
+
 }
 
 /**
@@ -61,28 +60,4 @@ function initNovelDetails(details) {
   );
   // here we first append the novel details section 
   headerElm.appendChild(novelDetails);
-}
-/**
- * create the scroller indicator for the dom to render for initial header scene
- * @param {object} details details of the book
- */
-function initScrollerIndicator() {
-  const headerElm = document.querySelector('header');
-  // here we create the scroll class
-  const novelScroll = elFactory(
-    'div',
-    { 'class' : 'novel_scroll'},
-    elFactory(
-      'div',
-      { 'class': 'novel_scroll-icon'},
-      elFactory(
-        'div',
-        { 'class': 'scroll-indicator' },
-        'scroll'
-      )
-    )
-  );
-
-  // here we first append the scroll indicator
-  headerElm.appendChild(novelScroll);
 }
