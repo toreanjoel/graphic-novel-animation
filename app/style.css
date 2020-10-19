@@ -33,7 +33,7 @@ body::-webkit-scrollbar-thumb {
 
 body {
   overflow-y: hidden;
-  background: var(--color-000);
+  background: var(--color-999);
 }
 
 header,
