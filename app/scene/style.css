@@ -1,39 +1,38 @@
 /* Scene styles */
 
-
 #scene {
-  overflow-x: hidden; 
-  border: calc(var(--default-spacing)*1.2) solid var(--color-000);
-  height: 100vh;
+  overflow-x: hidden;
+  border: calc(var(--default-spacing) * 2) solid var(--color-000);
+  height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: var(--font-monospace);
-  filter: blur(calc(var(--default-spacing)*0.5)) grayscale(1);
-  transition: all 1s ease;
-  margin-top: calc(var(--default-spacing)*5);
-  margin-bottom: calc(var(--default-spacing)*5);
+  filter: blur(calc(var(--default-spacing) * 0.5)) grayscale(1);
+  margin-top: calc(var(--default-spacing) * 5);
+  margin-bottom: calc(var(--default-spacing) * 5);
+  transition: filter 0.2s ease-in-out !important;
 }
 
 .sceneActive {
   filter: blur(0px) grayscale(0) !important;
-  transition: all 1s ease !important;
+  transition: filter 0.2s ease-in-out !important;
 }
 
 /* The info where we show more information for the scene and where they are positioned*/
 .scene-info {
   background-color: var(--color-FFF);
-  border:solid calc(var(--default-spacing)*0.2) var(--color-000);
-  margin:0;
-  padding: calc(var(--default-spacing)*1.5) calc(var(--default-spacing)*6.3);
+  border: solid calc(var(--default-spacing) * 0.2) var(--color-000);
+  margin: 0;
+  padding: calc(var(--default-spacing) * 1.5) calc(var(--default-spacing) * 6.3);
   z-index: 1000;
   opacity: 0;
 }
 
 .top-left {
   /* left: calc(-1 * var(--default-spacing)); */
-  position:absolute;
-  top:0;
+  position: absolute;
+  top: 0;
   /* transform:skew(-15deg); */
 }
 
@@ -75,14 +74,39 @@
 }
 
 #progressbar div {
-  height: calc(var(--default-spacing)*0.4);
+  height: calc(var(--default-spacing) * 0.4);
   background: var(--color-F00);
-  background: -o-linear-gradient(left, var(--color-FF7E00), var(--color-FF0048), var(--color-940BA2), var(--color-008AFF));
-  background: -webkit-gradient(linear, left top, right top, from(var(--color-FF7E00)), color-stop(var(--color-FF0048)), color-stop(var(--color-940BA2)), to(var(--color-008AFF)));
-  background: linear-gradient(90deg, var(--color-FF7E00), var(--color-FF0048), var(--color-940BA2), var(--color-008AFF));
-  border-radius: 0 calc(var(--default-spacing)*0.2) calc(var(--default-spacing)*0.2) 0;
-  -webkit-border-radius: 0 calc(var(--default-spacing)*0.2) calc(var(--default-spacing)*0.2) 0;
-  -moz-border-radius: 0 calc(var(--default-spacing)*0.2) calc(var(--default-spacing)*0.2) 0;
-  -ms-border-radius: 0 calc(var(--default-spacing)*0.2) calc(var(--default-spacing)*0.2) 0;
-  -o-border-radius: 0 calc(var(--default-spacing)*0.2) calc(var(--default-spacing)*0.2) 0;
+  background: -o-linear-gradient(
+    left,
+    var(--color-FF7E00),
+    var(--color-FF0048),
+    var(--color-940BA2),
+    var(--color-008AFF)
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(var(--color-FF7E00)),
+    color-stop(var(--color-FF0048)),
+    color-stop(var(--color-940BA2)),
+    to(var(--color-008AFF))
+  );
+  background: linear-gradient(
+    90deg,
+    var(--color-FF7E00),
+    var(--color-FF0048),
+    var(--color-940BA2),
+    var(--color-008AFF)
+  );
+  border-radius: 0 calc(var(--default-spacing) * 0.2)
+    calc(var(--default-spacing) * 0.2) 0;
+  -webkit-border-radius: 0 calc(var(--default-spacing) * 0.2)
+    calc(var(--default-spacing) * 0.2) 0;
+  -moz-border-radius: 0 calc(var(--default-spacing) * 0.2)
+    calc(var(--default-spacing) * 0.2) 0;
+  -ms-border-radius: 0 calc(var(--default-spacing) * 0.2)
+    calc(var(--default-spacing) * 0.2) 0;
+  -o-border-radius: 0 calc(var(--default-spacing) * 0.2)
+    calc(var(--default-spacing) * 0.2) 0;
 }

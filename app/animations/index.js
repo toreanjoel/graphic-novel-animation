@@ -124,10 +124,10 @@ function initScrollTriggers({ scenes  }) {
     ScrollTrigger.create({
       animation: timelineItem,
       trigger: `.${key}`,
-      start: '10% center',
-      end: 'bottom center',
+      start: 'top 13%',
+      end: 'bottom top',
       scrub: true,
-      // pin: true,
+      pin: true,
       // below we are keeping these but they will be commented out and used
       // for a later time
       // markers: true,

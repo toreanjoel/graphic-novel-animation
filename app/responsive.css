@@ -1,6 +1,6 @@
 /* Responsive and media queries */
 
-@media only screen and (min-width: 980px) {
+/* @media only screen and (min-width: 980px) {
   section {
     width: calc(var(--default-spacing) * 128);
     height: 50vh !important;
@@ -42,4 +42,4 @@
   .pin-spacer {
     height: 100vh !important;
   }
-}
+} */

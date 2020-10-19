@@ -6,6 +6,37 @@
 // add asasets loaded array and listen when array is being pushed to
 const LOADED_ASSETS = [];
 
+function autoPlayScrollerElm() {
+  // auto scroller
+  function autoScroll(shouldScroll) {
+    if (shouldScroll) {
+      const bodyElm = document.querySelector('html, body');
+      window.autoScrollerTicker = setInterval(() => {
+        bodyElm.scrollBy(0, 25)
+      }, 1000/60)
+    } else {
+      // remove the scroller
+      clearInterval(window.autoScrollerTicker);
+    }
+  }
+  // create the chekcbox and add
+  const autoScrollCheckboxElm = elFactory('div',
+    { 'type': 'checkbox', 'class': 'auto-play-wrapper' },
+    elFactory('span', {}, 'toggle autoscroll '),
+    elFactory('input',
+      { 'type': 'checkbox', 'class': 'auto-play--check' }
+    ));
+  document.body.appendChild(autoScrollCheckboxElm);
+  // setup the event listener on the elem
+  if (autoScrollCheckboxElm) {
+    const getCheckbox = document.querySelector('.auto-play--check');
+    getCheckbox.addEventListener('click', (event) => {
+      // here we need to run the function that will auto scroll the page
+      autoScroll(event.target.checked);
+    });
+  }
+}
+
 /**
  * This will run and make sure the images of all the layers are loaded on the application
  * and displaying before we stop the loader
@@ -35,8 +66,9 @@ function checkAssetsForScenesReady() {
  * Register servive worker on a new thread if its able to and then run service worker code
  */
 function initServiceWorker() {
-  if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('../sw.js'); // register the service worker in the root app level
+  if ('serviceWorker' in navigator) {
+    // register the service worker in the root app level
+    navigator.serviceWorker.register('../sw.js'); 
   };
 }
 
@@ -55,6 +87,8 @@ function initApp() {
   initAnimations({ data: scenes });
   // make sure scene images are all ready
   checkAssetsForScenesReady();
+  //here we ready the auto scroller
+  autoPlayScrollerElm();
   // init the service worker
   initServiceWorker();
 }

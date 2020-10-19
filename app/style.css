@@ -1,21 +1,23 @@
-@import './variables.css';
-@import './responsive.css';
-@import './animations/style.css';
-@import './header/style.css';
-@import './footer/style.css';
-@import './scene/style.css';
+@import "./variables.css";
+@import "./responsive.css";
+@import "./animations/style.css";
+@import "./header/style.css";
+@import "./footer/style.css";
+@import "./scene/style.css";
 
 /* Base styles */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* SCROLL BAR STYLES */
 /* width */
 body::-webkit-scrollbar {
-  width: calc(var(--default-spacing)*0.7);
+  width: calc(var(--default-spacing) * 0.7);
   background: var(--color-999);
 }
 
@@ -29,19 +31,21 @@ body::-webkit-scrollbar-thumb {
   background: var(--color-333);
 }
 
-
 body {
   overflow-y: hidden;
   background: var(--color-000);
 }
 
-header, footer {
+header,
+footer {
   height: 100vh;
   color: var(--color-FFF);
 }
 
 /* header section and footer */
-header, footer, section {
+header,
+footer,
+section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +63,9 @@ header, footer, section {
   z-index: 9999;
   background: var(--color-000);
   color: var(--color-999);
-  grid-template-rows: 1fr calc(var(--default-spacing)*10) var(--default-spacing) 1fr;
+  grid-template-rows:
+    1fr calc(var(--default-spacing) * 10) var(--default-spacing)
+    1fr;
   align-items: center;
   justify-content: center;
 }
@@ -86,3 +92,16 @@ header, footer, section {
   animation-delay: -0.5s;
 }
 
+.auto-play-wrapper {
+  position: fixed;
+  right: calc(var(--default-spacing) * 1.5);
+  bottom: var(--default-spacing);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: calc(var(--default-spacing) * 1.5);
+  align-items: center;
+}
+
+.auto-play-wrapper > .auto-play--check {
+  cursor: pointer;
+}
