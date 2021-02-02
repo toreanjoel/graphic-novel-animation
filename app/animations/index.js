@@ -124,13 +124,13 @@ function initScrollTriggers({ scenes  }) {
     ScrollTrigger.create({
       animation: timelineItem,
       trigger: `.${key}`,
-      start: 'top 13%',
-      end: 'bottom top',
+      start: 'top top',
+      end: 'bottom center',
       scrub: true,
       pin: true,
       // below we are keeping these but they will be commented out and used
       // for a later time
-      markers: true,
+      // markers: true,
       toggleClass: 'sceneActive',
       onEnter: () => console.info('enter the trigger'),
       onLeave: () => console.info('leave the trigger'),

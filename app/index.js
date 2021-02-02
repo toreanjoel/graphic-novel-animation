@@ -90,7 +90,7 @@ function initApp() {
   //here we ready the auto scroller
   autoPlayScrollerElm();
   // init the service worker
-  initServiceWorker();
+  // initServiceWorker();
 }
 
 /**
